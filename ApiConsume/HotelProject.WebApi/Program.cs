@@ -24,7 +24,7 @@ builder.Services.AddScoped<ISubscribeService, SubscribeManager>();
 builder.Services.AddScoped<ITestimonialDal, EfTestimonialDal>();
 builder.Services.AddScoped<ITestimonialService, TestimonialManager>();
 
-/*
+
 builder.Services.AddCors(opt =>
 {
     opt.AddPolicy("OtelApiCors", opts =>
@@ -32,7 +32,7 @@ builder.Services.AddCors(opt =>
         opts.AllowAnyOrigin().AllowAnyHeader().AllowAnyMethod();
     });
 });
-*/
+
 
 
 builder.Services.AddControllers();
@@ -49,9 +49,9 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
-//app.UseRouting();
+app.UseRouting();
 
-//app.UseCors("OtelApiCors");
+app.UseCors("OtelApiCors");
 
 app.UseAuthorization();
 
