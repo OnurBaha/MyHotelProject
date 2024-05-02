@@ -20,9 +20,6 @@
 
 <body class="h-100">
 
-    <!--*******************
-        Preloader start
-    ********************-->
     <div id="preloader">
         <div class="loader">
             <svg class="circular" viewBox="25 25 50 50">
@@ -30,13 +27,6 @@
             </svg>
         </div>
     </div>
-    <!--*******************
-        Preloader end
-    ********************-->
-
-
-
-
 
     <div class="login-form-bg h-100">
         <div class="container h-100">
@@ -50,27 +40,27 @@
 
                                 <form class="mt-5 mb-5 login-input" method="post">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Adınız" asp-asp-for="Name">
+                                        <input type="text" class="form-control" placeholder="Adınız" asp-for="Name">
                                         <span asp-validation-for="Name" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Soyadınız" asp-asp-for="Surname">
+                                        <input type="text" class="form-control" placeholder="Soyadınız" asp-for="Surname">
                                         <span asp-validation-for="Surname" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Kullanıcı Adınız" asp-asp-for="Username">
+                                        <input type="text" class="form-control" placeholder="Kullanıcı Adınız" asp-for="Username">
                                         <span asp-validation-for="Username" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Mail Adresiniz" asp-asp-for="Mail">
+                                        <input type="text" class="form-control" placeholder="Mail Adresiniz" asp-for="Mail">
                                         <span asp-validation-for="Mail" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Şifreniz" asp-asp-for="Password">
+                                        <input type="text" class="form-control" placeholder="Şifreniz" asp-for="Password">
                                         <span asp-validation-for="Password" class="text-warning"></span>
                                     </div>
                                     <div class="form-group">
-                                        <input type="text" class="form-control" placeholder="Şifre Tekrarı" asp-asp-for="ConfirmPassword">
+                                        <input type="text" class="form-control" placeholder="Şifre Tekrarı" asp-for="ConfirmPassword">
                                         <span asp-validation-for="ConfirmPassword" class="text-warning"></span>
                                     </div>
                                     <button class="btn login-form__btn submit w-100">Kayıt Ol</button>
