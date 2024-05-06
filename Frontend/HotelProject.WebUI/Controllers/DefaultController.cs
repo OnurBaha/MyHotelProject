@@ -1,5 +1,4 @@
-﻿using HotelProject.WebUI.Dtos.ServiceDto;
-using HotelProject.WebUI.Dtos.SubscribeDto;
+﻿using HotelProject.WebUI.Dtos.SubscribeDto;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Text;
