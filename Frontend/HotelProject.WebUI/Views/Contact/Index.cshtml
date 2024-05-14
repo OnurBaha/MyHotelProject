@@ -1,0 +1,39 @@
+﻿@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+
+
+@await Component.InvokeAsync("_HeadPartial")
+
+<body>
+    <div class="container-xxxl bg-white p-0">
+        <!-- Spinner Start -->
+        @await Component.InvokeAsync("_SpinnerPartial")
+        <!-- Spinner End -->
+        <!-- Header Start -->
+        @await Component.InvokeAsync("_NavbarPartial")
+        <!-- Header End -->
+        <!-- Carousel Start -->
+        @await Component.InvokeAsync("_ContactCoverPartial")
+        <!-- Carousel End -->
+        <!-- Booking Start -->
+        @await Html.PartialAsync("/Views/Contact/SendMessage.cshtml")
+        <!-- Booking End -->
+        <!-- Newsletter Start -->
+        @await Html.PartialAsync("/Views/Default/_SubscribePartial.cshtml")
+        <!-- Newsletter Start -->
+        <!-- Footer Start -->
+        @await Component.InvokeAsync("_FooterPartial")
+        <!-- Footer End -->
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-lg btn-primary btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
+    </div>
+    <!-- JavaScript Libraries -->
+    @await Component.InvokeAsync("_ScriptPartial")
+</body>
+
+</html>
