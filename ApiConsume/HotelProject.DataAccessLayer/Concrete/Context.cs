@@ -15,6 +15,26 @@ namespace HotelProject.DataAccessLayer.Concrete
         {
             optionsBuilder.UseSqlServer(@"Server=(localdb)\mssqllocaldb;Database=ApiDb;Trusted_Connection=true");
         }
+
+        protected override void OnModelCreating(ModelBuilder builder)
+        {
+            base.OnModelCreating(builder);
+
+            builder.Entity<Room>(entry =>
+            {
+                entry.ToTable("Rooms", tb => tb.HasTrigger("RoomsCountTrigger"));
+            });
+            builder.Entity<Staff>(entry =>
+            {
+                entry.ToTable("Staffs", tb => tb.HasTrigger("StaffsCountTrigger"));
+            });
+            builder.Entity<Guest>(entry =>
+            {
+                entry.ToTable("Guests", tb => tb.HasTrigger("GuestsCountTrigger"));
+            });
+        }
+
+
         public DbSet<Room>Rooms { get; set; }
         public DbSet<Service> Services { get; set; }
         public DbSet<Staff> Staffs { get; set;}

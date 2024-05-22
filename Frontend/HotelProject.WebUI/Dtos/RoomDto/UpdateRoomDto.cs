@@ -1,6 +1,6 @@
 ﻿namespace HotelProject.WebUI.Dtos.RoomDto
 {
-    public class ResultRoomDto
+    public class UpdateRoomDto
     {
         public int RoomID { get; set; }
         public string RoomNumber { get; set; }

@@ -1,8 +1,7 @@
 ﻿namespace HotelProject.WebUI.Dtos.RoomDto
 {
-    public class ResultRoomDto
+    public class CreateRoomDto
     {
-        public int RoomID { get; set; }
         public string RoomNumber { get; set; }
         public string RoomCoverImage { get; set; }
         public int Price { get; set; }
