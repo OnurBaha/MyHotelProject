@@ -42,10 +42,16 @@ namespace HotelProject.WebApi.Controllers
             return Ok();
         }
         [HttpGet("{id}")]
-        public IActionResult GetContact(int id)
+        public IActionResult GetContactMessage(int id)
         {
             var values = _contactService.TGetByID(id);
             return Ok(values);
         }
+        //[HttpGet("{id}")]
+        //public IActionResult GetSendMessage(int id)
+        //{
+        //    var values = _contactService.TGetByID(id);
+        //    return Ok(values);
+        //}
     }
 }
