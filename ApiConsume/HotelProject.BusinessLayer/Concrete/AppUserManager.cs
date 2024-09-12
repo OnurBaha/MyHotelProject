@@ -30,7 +30,7 @@ namespace HotelProject.BusinessLayer.Concrete
 
         public List<AppUser> TGetList()
         {
-            throw new NotImplementedException();
+            return _appUserDal.GetList();
         }
 
         public void TInsert(AppUser t)
