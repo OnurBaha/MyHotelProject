@@ -26,13 +26,26 @@
                                     <td>
                                         <span>@item.Country</span>
                                     </td>
+                                    @if (item.Gender == "Erkek")
+                                    {
                                     <td>
                                         <div>
                                             <div class="progress" style="height: 6px">
-                                                <div class="progress-bar bg-success" style="width: 50%"></div>
+                                                <div class="progress-bar bg-success" style="width: 90%"></div>
                                             </div>
                                         </div>
                                     </td>
+                                    }
+                                    @if (item.Gender == "Kadın")
+                                    {
+                                        <td>
+                                            <div>
+                                                <div class="progress" style="height: 6px">
+                                                    <div class="progress-bar bg-warning" style="width: 90%"></div>
+                                                </div>
+                                            </div>
+                                        </td>
+                                    }
                                     @if (item.Gender == "Erkek")
                                     {
                                     <td><i class="fa fa-circle-o text-success  mr-2"></i> Erkek</td>
