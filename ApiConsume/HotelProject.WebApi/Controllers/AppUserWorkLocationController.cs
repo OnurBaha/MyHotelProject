@@ -1,5 +1,7 @@
 ﻿using HotelProject.BusinessLayer.Abstract;
+using HotelProject.DataAccessLayer.Concrete;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HotelProject.WebApi.Controllers
 {
@@ -17,7 +19,9 @@ namespace HotelProject.WebApi.Controllers
         [HttpGet]
         public IActionResult Index() 
         {
-             var values = _appUserService.TUsersListWithWorkLocations();
+            //var values = _appUserService.TUsersListWithWorkLocations();
+            Context context = new Context();
+            var values = context.Users.Include(x => x.WorkLocation).Select(y => )
             return Ok (values);
         }
     }
