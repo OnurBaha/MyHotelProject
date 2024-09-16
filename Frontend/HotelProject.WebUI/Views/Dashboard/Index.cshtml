@@ -10,57 +10,8 @@
     <div class="container-fluid mt-3">
         @await Component.InvokeAsync("_DashboardWidgetPartial")
 
-        <div class="row">
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                            <img src="~/adminweb/images/users/8.jpg" class="rounded-circle" alt="">
-                            <h5 class="mt-3 mb-1">Ana Liem</h5>
-                            <p class="m-0">Senior Manager</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                        <img src="~/adminweb/images/users/5.jpg" class="rounded-circle" alt="">
-                            <h5 class="mt-3 mb-1">John Abraham</h5>
-                            <p class="m-0">Store Manager</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                        <img src="~/adminweb/images/users/7.jpg" class="rounded-circle" alt="">
-                            <h5 class="mt-3 mb-1">John Doe</h5>
-                            <p class="m-0">Sales Man</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-3 col-sm-6">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="text-center">
-                        <img src="~/adminweb/images/users/1.jpg" class="rounded-circle" alt="">
-                            <h5 class="mt-3 mb-1">Mehedi Titas</h5>
-                            <p class="m-0">Online Marketer</p>
-                            <!-- <a href="javascript:void()" class="btn btn-sm btn-warning">Send Message</a> -->
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
+        @await Component.InvokeAsync("_DashboardLast4StaffList")
+    
 
         <div class="row">
             <div class="col-lg-12">
