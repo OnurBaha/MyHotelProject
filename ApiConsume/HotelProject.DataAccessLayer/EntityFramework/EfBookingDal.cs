@@ -40,5 +40,12 @@ namespace HotelProject.DataAccessLayer.EntityFramework
             values.Status = "Müşteri Aranacak";
             context.SaveChanges();
         }
+
+        public int GetBookingCount()
+        {
+            var context = new Context();
+            var value = context.Bookings.Count();
+            return value;
+        }
     }
 }

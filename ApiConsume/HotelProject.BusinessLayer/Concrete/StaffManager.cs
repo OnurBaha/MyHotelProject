@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace HotelProject.BusinessLayer.Concrete
 {
-    public class StaffManager:IStaffService
+    public class StaffManager : IStaffService
     {
         private readonly IStaffDal _staffDal;
         public StaffManager(IStaffDal staffDal)
@@ -29,6 +29,11 @@ namespace HotelProject.BusinessLayer.Concrete
         public List<Staff> TGetList()
         {
             return _staffDal.GetList();
+        }
+
+        public int TGetStaffCount()
+        {
+            return _staffDal.GetStaffCount();
         }
 
         public void TInsert(Staff t)
